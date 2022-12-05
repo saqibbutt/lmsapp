@@ -1,0 +1,293 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <section class="section bgw">
+        <div class="container">
+            <div class="row">
+                <div id="post-content" class="col-md-10 col-md-offset-1 col-sm-12">
+                    <div class="single-content">
+                        <div class="row post-micro big-post clearfix">
+                            <div class="col-md-12">
+                                <div class="large-post-meta text-center">
+                                <span class="avatar"><a href="author.html"><img src="/media/avatar_01.png" alt=""
+                                                                                class="img-circle">{{ post.author }}</a></span>
+                                    <small>&#124;</small>
+                                    <span><a href="category.html"><i
+                                            class="fa fa-clock-o"></i>{{ post.publish }}</a></span>
+                                    <small class="hidden-xs">&#124;</small>
+                                    <span class="hidden-xs"><a href="single.html#comments"><i
+                                            class="fa fa-comments-o"></i> 92</a></span>
+                                    <small class="hidden-xs">&#124;</small>
+                                    <span class="hidden-xs"><a href="single.html"><i
+                                            class="fa fa-eye"></i> 1223</a></span>
+                                </div><!-- end meta -->
+
+                                <h3 class="entry-title text-center"><a href="single.html" title="">{{ post.title }}</a>
+                                </h3>
+
+                                <div class="post-sharing text-center">
+                                    <ul class="list-inline">
+                                        <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i>
+                                            <span class="hidden-xs">Share on Facebook</span></a></li>
+                                        <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i>
+                                            <span class="hidden-xs">Tweet on Twitter</span></a></li>
+                                        <li><a href="#" class="gp-button btn btn-primary"><i
+                                                class="fa fa-google-plus"></i></a>
+                                        </li>
+                                    </ul>
+                                </div><!-- end post-sharing -->
+
+                                <div class="post-media">
+                                    <img src="/media/big_blog_01.jpg" alt="" class="img-responsive">
+                                </div><!-- end post-media -->
+
+                                <div class="post-padding clearfix">
+                                    <p>Morbi congue leo et est sodales consequat a quis est. Nunc aliquam ut massa et
+                                        accumsan. Donec cursus pretium porta. Maecenas vehicula pellentesque eros, non
+                                        consectetur massa finibus quis. Ut ut rhoncus purus. Donec varius ultricies
+                                        dapibus.
+                                        Aliquam facilisis lacus purus, sit amet maximus lectus auctor et. Nam vehicula
+                                        eget
+                                        leo sed gravida.</p>
+
+                                    <p><img src="/media/alignleft.png" alt="" class="alignleft">In dignissim feugiat
+                                        gravida. <em>Proin feugiat quam sed gravida fringilla.</em> Proin quis mauris ut
+                                        magna fringilla vulputate quis non ante. Integer bibendum velit dui. Sed
+                                        consequat
+                                        nisi id convallis eleifend. Proin rhoncus dapibus vulputate. Phasellus eget
+                                        fringilla justo. Aliquam erat volutpat. <a href="#">Praesent lorem nisi</a>
+                                        vehicula
+                                        fringilla rutrum facilisis, tempus sed ipsum. Mauris commodo mattis ante, at
+                                        consequat lectus blandit nec. Nulla facilisi. Phasellus aliquet est ac faucibus
+                                        iaculis. <strong>Sed non lorem in quam placerat</strong> facilisis nec eu quam.
+                                        Etiam at tincidunt felis, et posuere eros. Nulla dictum id enim vitae fermentum.
+                                        Phasellus eget fringilla justo. Aliquam erat volutpat. <a href="#">Praesent
+                                            lorem
+                                            nisi</a> vehicula fringilla rutrum facilisis, tempus sed ipsum. Mauris
+                                        commodo
+                                        mattis ante, at consequat lectus blandit nec. Nulla facilisi. Phasellus aliquet
+                                        est
+                                        ac faucibus iaculis. <strong>Sed non lorem in quam placerat</strong> facilisis
+                                        nec
+                                        eu quam. Etiam at tincidunt felis, et posuere eros. Nulla dictum id enim vitae
+                                        fermentum.</p>
+
+                                    <blockquote>
+                                        <p>Love can travel a thousand miles. Life has no limit. Go where you want to go.
+                                            Reach the height you want to reach. It is all in your heart and in your
+                                            hands.</p>
+                                        <footer><cite title="Source Title">Steave Jobs</cite></footer>
+                                    </blockquote>
+
+                                    <p><img src="/media/alignright.png" alt="" class="alignright">Suspendisse quis
+                                        dignissim
+                                        diam, id faucibus sapien. Integer et egestas elit. Suspendisse pretium neque
+                                        congue
+                                        auctor consequat. Nulla tincidunt justo tortor, volutpat placerat nisl pharetra
+                                        vitae. Cras rhoncus ante et leo commodo fermentum. In consequat elit tristique
+                                        orci
+                                        scelerisque pretium. Pellentesque placerat at tortor et vehicula. Praesent
+                                        egestas
+                                        efficitur auctor. Suspendisse vel finibus lectus. Maecenas ligula leo, aliquam
+                                        non
+                                        odio et, tincidunt congue nulla. Maecenas aliquam interdum erat ac convallis. In
+                                        consequat elit tristique orci scelerisque pretium. Pellentesque placerat at
+                                        tortor
+                                        et vehicula. Praesent egestas efficitur auctor. Suspendisse vel finibus lectus.
+                                        Maecenas ligula leo, aliquam non odio et, tincidunt congue nulla. Maecenas
+                                        aliquam
+                                        interdum erat ac convallis.In consequat elit tristique orci scntesque placerat
+                                        at
+                                        tortor et vehicula. Praesent egestas efficitur auctor. Suspendisse vel finibus
+                                        lectus. Maecenas ligula leo, aliquam non odio et, tincidunt congue nulla.
+                                        Maecenas
+                                        aliquam interdum erat ac convallis. </p>
+
+                                    <hr>
+
+                                    <p class="text-center"><em>Proin rhoncus dapibus vulputate. Raesent egestas
+                                        efficitur
+                                        auctor. Suspendisse vel finibus lectus. Maecenas ligula leo, aliquam non odio
+                                        et,
+                                        tincidunt congue nulla. Maecenas aliquam interdum erat ac convallis.</em></p>
+
+                                    <hr>
+
+                                    <p> In dignissim feugiat gravida. <em>Proin feugiat quam sed gravida fringilla.</em>
+                                        Proin quis mauris ut magna fringilla vulputate quis non ante. Integer bibendum
+                                        velit
+                                        dui. Sed consequat nisi id convallis eleifend. Proin
+                                        <mark>et posuere eros</mark>
+                                        rhoncus dapibus vulputate. Phasellus eget fringilla justo. Aliquam erat
+                                        volutpat.
+                                        Praesent lorem nisi, vehicula fringilla rutrum facilisis, tempus sed ipsum.
+                                        Mauris
+                                        commodo mattis ante, at consequat lectus blandit nec. Nulla facilisi. Phasellus
+                                        <small>aliquet est ac faucibus iaculis.</small> Sed non lorem in quam placerat
+                                        facilisis nec eu quam. Etiam at tincidunt felis,. Nulla dictum id enim vitae
+                                        fermentum.
+                                    </p>
+
+                                    <div class="tags clearfix">
+                                        <a href="#">web design</a>
+                                        <a href="#">club</a>
+                                        <a href="#">html5</a>
+                                        <a href="#">css3</a>
+                                        <a href="#">app</a>
+                                    </div><!-- end tags -->
+                                </div><!-- end post-padding -->
+                            </div><!-- end col -->
+                        </div><!-- end post-padding -->
+                    </div><!-- end content -->
+
+
+                    <div class="single-content comment-wrapper">
+                        <div class="related-posts">
+                            <div class="big-title">
+                                <h2 class="related-title">
+                                    <span>3 Comments</span>
+                                </h2>
+                            </div><!-- end big-title -->
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel">
+                                        <div class="panel-body comments">
+                                            <ul class="media-list">
+                                                <li class="media">
+                                                    <div class="comment">
+                                                        <a href="#" class="pull-left">
+                                                            <img src="/media/avatar_01.png" alt="" class="img-circle">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <strong class="text-success">Jane Doe</strong>
+                                                            <span class="text-muted">
+                                                                <small class="text-muted">6 days ago</small></span>
+                                                            <p>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Lorem ipsum dolor sit amet, <a href="#">#some link </a>.
+                                                            </p>
+                                                            <a href="#" class="btn btn-primary btn-sm">Reply</a>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                    <ul class="media-list">
+                                                        <li class="media">
+                                                            <div class="comment">
+                                                                <a href="#" class="pull-left">
+                                                                    <img src="/media/avatar_02.png" alt=""
+                                                                         class="img-circle">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <strong class="text-success">MrAwesome</strong>
+                                                                    <span class="text-muted">
+                                                                        <small class="text-muted">2 days ago</small></span>
+                                                                    <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur
+                                                                        adipiscing
+                                                                        elit. Lorem ipsum dolor sit amet.
+                                                                    </p>
+                                                                    <a href="#" class="btn btn-primary btn-sm">Reply</a>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="media">
+                                                            <div class="comment">
+                                                                <a href="#" class="pull-left">
+                                                                    <img src="/media/avatar_01.png" alt=""
+                                                                         class="img-circle">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <strong class="text-success">Miss Lucia</strong>
+                                                                    <span class="text-muted">
+                                                                        <small class="text-muted">15 minutes ago</small></span>
+                                                                    <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur
+                                                                        adipiscing
+                                                                        elit. Lorem ipsum dolor sit amet.
+                                                                    </p>
+                                                                    <a href="#" class="btn btn-primary btn-sm">Reply</a>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="media">
+                                                    <div class="comment">
+                                                        <a href="#" class="pull-left">
+                                                            <img src="/media/avatar_02.png" alt="" class="img-circle">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <strong class="text-success">Jana Cova</strong>
+                                                            <span class="text-muted">
+                                                                <small class="text-muted">12 days ago</small></span>
+                                                            <p>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Lorem ipsum dolor sit amet.
+                                                            </p>
+                                                            <a href="#" class="btn btn-primary btn-sm">Reply</a>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="media">
+                                                    <div class="comment">
+                                                        <a href="#" class="pull-left">
+                                                            <img src="/media/avatar_01.png" alt="" class="img-circle">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <strong class="text-success">Johnatan Smarty</strong>
+                                                            <span class="text-muted">
+                                                                <small class="text-muted">1 month ago</small></span>
+                                                            <p>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                                                            </p>
+                                                            <a href="#" class="btn btn-primary btn-sm">Reply</a>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end postpager -->
+                    </div><!-- end content -->
+
+                    <div class="single-content comment-wrapper">
+                        <div class="clearfix">
+                            <div class="big-title">
+                                <h2 class="related-title">
+                                    <span>Leave a Comment</span>
+                                </h2>
+                            </div><!-- end big-title -->
+
+                            <div class="contact_form">
+                                <form class="row">
+                                    <div class="col-md-4 col-sm-12">
+                                        <input type="text" class="form-control" placeholder="Your name">
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <input type="email" class="form-control" placeholder="Your Email">
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <input type="text" class="form-control" placeholder="Website">
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <textarea class="form-control" placeholder="Message goes here"></textarea>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <input type="submit" value="Send Comment" class="btn btn-primary"/>
+                                    </div>
+                                </form>
+                            </div><!-- end commentform -->
+                        </div><!-- end postpager -->
+                    </div><!-- end content -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section><!-- end section -->
+{% endblock %}

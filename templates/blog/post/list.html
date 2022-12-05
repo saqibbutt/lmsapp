@@ -1,0 +1,109 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+    <section class="section paralbackground banner" style="background-image:url('/media/pagebanner_03.jpg');"
+             data-img-width="2400" data-img-height="907" data-diff="100">
+        <div class="overlay"></div>
+    </section><!-- end section -->
+
+    <div class="page-title bgg">
+        <div class="container clearfix">
+            <div class="title-area pull-left">
+                <h2>Blog Grid <small>Listed below our awesome blog posts</small></h2>
+            </div><!-- /.pull-right -->
+            <div class="pull-right hidden-xs">
+                <div class="bread">
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li class="active">Blog</li>
+                    </ol>
+                </div><!-- end bread -->
+            </div><!-- /.pull-right -->
+        </div>
+    </div><!-- end page-title -->
+
+
+    <section class="section bgw">
+        <div class="container">
+            <div class="row blog-grid"> <!-- Start Grid for all Posts -->
+
+                {% for post in posts %}
+                    <div class="col-md-4 col-sm-12 mob20"> <!-- start of single post area -->
+
+                        <div class="shop-item "> <!-- start of single post item -->
+
+                            <div class="post-media entry">
+                                <img src="/media/blog_01.jpg" alt="" class="img-responsive">
+                                <div class="magnifier">
+                                    <div class="shop-bottom clearfix">
+                                        <a href="#" title="Full Preview"><i class="fa fa-link"></i></a>
+                                    </div><!-- end shop-bottom -->
+                                </div><!-- end magnifier -->
+                            </div><!-- end post-media -->
+
+                            <div class="shop-desc">
+                                <div class="shop-price clearfix">
+                                    <small><a href="#">Web Design</a></small>
+                                </div>
+                                <h3><a href="{{ post.get_absolute_url }}" title="">{{ post.title }}</a></h3>
+                                <p>{{ post.body|truncatewords:30|linebreaks }}</p>
+                            </div>
+
+                            <div class="large-post-meta">
+                                <span class="avatar"><a href="member-profile.html"><img src="/media/avatar_02.png"
+                                                                                        alt=""
+                                                                                        class="img-circle">{{ post.author }}</a></span>
+                                <small>&#124;</small>
+                                <span><a href="single.html"><i class="fa fa-clock-o"></i>{{ post.publish }}</a></span>
+                                <small class="hidden-xs">&#124;</small>
+                                <span class="hidden-xs"><a href="single.html"><i
+                                        class="fa fa-comments-o"></i> 12 Comments</a></span>
+                            </div><!-- end meta -->
+                        </div><!-- end of single post item -->
+
+                    </div><!-- end of single post area -->
+                {% endfor %}
+
+            </div><!-- End Grid for all Posts -->
+
+            <nav class="clearfix text-center">
+
+                {% if page.has_other_pages %}
+
+                    <ul class="pagination">
+                        {% if page.has_previous %}
+                            <li>
+                                <a href="?page={{ page.previous_page_number }}">&laquo;</a>
+                            </li>
+                        {% else %}
+                            <li class="disabled">
+                                <span>&laquo;</span>
+                            </li>
+                        {% endif %}
+                        {% for i in page.paginator.page_range %}
+                            {% if page.number == i %}
+                                <li class="active">
+                                    <span>{{ i }} <span class="sr-only">(current)</span></span>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a href="?page={{ i }}">{{ i }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if page.has_next %}
+                            <li>
+                                <a href="?page={{ page.next_page_number }}">&raquo;</a>
+                            </li>
+                        {% else %}
+                            <li class="disabled">
+                                <span>&raquo;</span>
+                            </li>
+                        {% endif %}
+                    </ul>
+                {% endif %}
+            </nav>
+
+        </div><!-- end container -->
+    </section><!-- end section -->
+{% endblock %}
